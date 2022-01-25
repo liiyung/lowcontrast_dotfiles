@@ -1,0 +1,1247 @@
+:root {
+    --bar-height: 70px;
+    --bar-cover-art-size: 40px;
+    --main-gap: 10px;
+    --main-corner-radius: 10px;
+    --scrollbar-vertical-size: 8px;
+    --cover-border-radius: 8px;
+    --os-windows-icon-dodge: 0;
+}
+
+@font-face {
+    font-family: "Cozette";
+    src: url("/Users/Lii/custom/fonts/CozetteVector.otf") format("otf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Dank Mono";
+    src: url("/Users/Lii/custom/fonts/DankMono-Regular.ttf") format("ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("/Users/Lii/custom/fonts/Lora-VariableFont_wght.ttf") format("ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+/*@font-face {
+    font-family: "Cozette";
+    src: url("/Users/Lii/custom/fonts/CozetteVector.dfont") format("dfont");
+    font-style: normal;
+    font-weight: 500;
+}*/
+
+body {
+    --glue-font-family: "Dank Mono",spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+    --info-font-family: "Dank Mono",spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+    font-family: var(--glue-font-family);
+    letter-spacing: normal;
+}
+
+/*scrollbar puck*/
+.os-theme-spotify>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle  {
+    background: rgba(36,36,36,1);
+    max-height: none;
+    min-height: 30px;
+}
+
+.main-type-mesto,
+.main-type-mestoBold,
+.main-type-ballad,
+.main-type-balladBold,
+.main-type-canon {
+    font-family: Dank Mono;
+    font-size:  12px;
+    color: var(--spice-text) !important;
+    letter-spacing: normal;
+}
+
+/*title of playlist at top of page*/
+.main-entityHeader-titleButton {
+    color: var(--spice-highlight);
+}
+
+/*title artist page*/
+section[data-testid="artist-page"] .main-entityHeader-title {
+    margin-top: -35px;
+}
+
+
+/*play buttons almost in general*/
+.main-playButton-PlayButton.main-playButton-primary {
+    background-color: var(--spice-pink);
+    color: var(--spice-highlight);
+    display: none;
+}
+
+/*buttons at top of page*/
+/*round play pause button*/
+.main-actionBar-ActionBarRow .main-playButton-PlayButton.main-playButton-primary {
+    background-color: var(--spice-pink);
+    color: var(--spice-highlight);
+    display: none;
+    position: absolute;
+    margin-left: 42px;
+}
+/*download button*/
+._APVWqivXc4YqgsnpFkP, .HbKLiGoYM4dpuK8L4TMX {
+    display: block;
+    position: absolute;
+    margin-left: 55px;
+}
+/*download button purple*/
+._APVWqivXc4YqgsnpFkP, ._APVWqivXc4YqgsnpFkP:hover, .HbKLiGoYM4dpuK8L4TMX:hover {
+    color: var(--spice-purple);
+}
+/*three dots, more menu button*/
+.main-moreButton-button {
+    background: transparent;
+    border: 0;
+    color: rgba(255,255,255,.6);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    display: block;
+    position: absolute;
+    margin-left: 110px;
+}
+
+/*title of playlist after scrolling down*/
+.main-entityHeader-topbarTitle {
+    font-family: Lora;
+    font-weight: 300;
+    color: var(--spice-highlight);
+    width: 100%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+/*play button after scrolling down*/
+.main-topBar-topbarContent .main-playButton-PlayButton {
+    --size: 35px !important;
+    display: none;
+    position: absolute;
+    margin-left: 60px;
+}
+
+/*history buttons left and right AS A BLOCK*/
+.main-topBar-historyButtons {
+    margin-left: 41px;
+    position: absolute;
+    z-index: 9;
+}
+
+/*history buttons left right*/
+.main-topBar-historyButtons .main-topBar-button {
+    background-color: unset;
+    width: 24px;
+    height: 24px;
+}
+
+/*history buttons left and right buttons on top*/
+.main-topBar-historyButtons svg {
+    color: var(--spice-blue);
+    fill: var(--spice-blue);
+}
+/*history button right*/
+.main-topBar-historyButtons .main-topBar-back {
+    display: inline-flex !important;
+}
+
+
+/*creator of the playlist*/
+.main-entityHeader-metaData .main-entityHeader-creatorWrapper a {
+    color: var(--spice-purple) !important;
+    font-style: italic;
+}
+
+/*edit playlist description, close button hover*/
+.main-playlistEditDetailsModal-closeBtn:hover {
+    background-color: var(--spice-selection);
+}
+
+/*edit playlist edit description*/
+.main-playlistEditDetailsModal-textElementLabel {
+    color: var(--spice-purple);
+}
+
+/*edit playlist description background colour*/
+.main-playlistEditDetailsModal-descriptionTextarea {
+    background-color: var(--spice-main);
+}
+
+/*header space*/
+.main-entityHeader-container.main-entityHeader-nonWrapped {
+    height: 60vh;
+    max-height: 60vh;
+    min-height: 340px;
+}
+
+/*playlist image parent????? what kind of stupid class name is this??? looks autogenerated!!!?!?!? */
+.oq1ci28WPaRsWkvRiB_J {
+    width: 100%;
+    height: 60vh;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*playlist image*/
+[data-testid="playlist-image"] {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+/*playlist text (title + metadata)*/
+.main-entityHeader-headerText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: -9%;
+    /*margin-right: auto;*/
+    text-align: center;
+    /*margin-top: 40vh;*/
+    height: 150px;
+    position: absolute;
+    top: 300px;
+}
+
+/*playlist title*/
+.main-type-bass {
+    font-family: Lora;
+    font-weight: 350;
+    font-size: 50px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/*remove stupid padding under the playlist title*/
+.main-view-container__scroll-node-child {
+    padding-bottom: 1px !important;
+}
+
+/*the word "playlist"*/
+.main-entityHeader-subtitle {
+    display: none !important;
+}
+
+
+/*the main grid, main playlist grid*/
+.rezqw3Q4OEPB1m4rmwfw {
+    position: absolute;
+    top: 450px;
+}
+
+
+
+.main-entityHeader-metaData:hover {
+    color: var(--spice-purple) !important;
+    font-decoration: none !important;
+}
+
+/*local files*/
+.wfFs4LpuSSZfVAgUx67H {
+    background: #292929;
+}
+/*local files folder image, change hue of the spotify default green folder */
+.wfFs4LpuSSZfVAgUx67H  img {
+    content: url("file:///Users/Lii/Downloads/kawaii-folders.png") !important;
+    filter: grayscale(50%) hue-rotate(90deg);
+}
+
+/*liked songs card in library*/
+.W5JUlxsbMsaSi4DGjoPN {
+    background: var(--spice-main);
+}
+.W5JUlxsbMsaSi4DGjoPN:hover {
+    background: var(--spice-selection);
+    border-radius: 10px;
+}
+
+
+
+
+.main-type-ballad {
+    font-weight: 500;
+}
+
+.lyrics-lyricsContainer-LyricsLine {
+    font-family: var(--glue-font-family);
+    letter-spacing: -.03em !important;
+}
+
+.main-rootlist-rootlistDivider {
+    display: none;
+}
+
+input {
+    background-color: unset !important;
+    border-bottom: solid 1px var(--spice-text) !important;
+    border-radius: 0 !important;
+    padding: 6px 10px 6px 48px;
+    color: var(--spice-text) !important;
+}
+
+.x-searchInput-searchInputSearchIcon,
+.x-searchInput-searchInputClearButton {
+    color: var(--spice-text) !important;
+}
+
+.main-home-homeHeader,
+.x-entityHeader-overlay,
+.x-actionBarBackground-background,
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
+.main-entityHeader-backgroundColor
+{
+    background-color: unset !important;
+    background-image: unset !important;
+    color: var(--spice-text);
+}
+
+
+.connect-title, .connect-header {
+    display: none;
+}
+
+.connect-device-list {
+    margin: 0px -5px;
+}
+
+/* Remove Topbar background colour */
+.main-topBar-background {
+    background-color: unset !important;
+}
+.main-topBar-overlay {
+    background-color: var(--spice-main);
+}
+
+.main-entityHeader-shadow,
+.main-contextMenu-menu,
+.connect-device-list-container {
+    /*box-shadow: 0 4px 20px #21212130;*/
+}
+
+.main-trackList-trackListHeader {
+    background-color: var(--spice-main);
+}
+
+.main-trackList-playingIcon {
+    filter: grayscale(1);
+}
+
+span.artist-artistVerifiedBadge-badge svg > path:first-of-type {
+    fill: var(--spice-pink);
+}
+span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
+    fill: var(--spice-text);
+}
+
+/* Full window artist background */
+.main-entityHeader-background.main-entityHeader-gradient {
+    opacity: 0.3;
+}
+
+.main-entityHeader-container.main-entityHeader-withBackgroundImage,
+.main-entityHeader-background,
+.main-entityHeader-background.main-entityHeader-overlay:after {
+    height: 100vh;
+}
+
+.main-entityHeader-withBackgroundImage .main-entityHeader-headerText {
+    justify-content: center;
+}
+
+.main-entityHeader-container.main-entityHeader-nonWrapped.main-entityHeader-withBackgroundImage {
+    padding-left: 9%;
+}
+
+.main-entityHeader-background.main-entityHeader-overlay:after {
+    background-image: linear-gradient(transparent,transparent),linear-gradient(var(--spice-main), var(--spice-main));
+}
+
+.artist-artistOverview-overview .main-entityHeader-withBackgroundImage h1 {
+    font-size: 120px !important;
+    line-height: 120px !important;
+}
+
+/** Highlight selected playlist, current playlist */
+.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive {
+    background: var(--spice-selection);
+    border-radius: 4px;
+}
+
+/*current tab, home search library*/
+.main-navBar-navBarLinkActive {
+    background: var(--spice-selection);
+}
+
+.main-contextMenu-menu {
+    background-color: var(--spice-main);
+    color: var(--spice-text);
+}
+
+.main-contextMenu-menuHeading,
+.main-contextMenu-menuItemButton,
+.main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):focus,
+.main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):hover {
+    color: var(--spice-text);
+}
+
+.main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):hover {
+    background-color: var(--spice-selection);
+    color: var(--spice-text);
+}
+
+
+/** Queue page header */
+.queue-queue-title,
+.queue-playHistory-title {
+    color: var(--spice-text) !important;
+}
+
+/** Artist page */
+.artist-artistOverview-heading {
+    color: var(--spice-text) !important;
+}
+.artist-artistAbout-content .artist-artistAbout-cityBlock div,
+.artist-artistAbout-content .artist-artistAbout-stats div {
+    color: var(--spice-text) !important;
+}
+.artist-artistAbout-content div {
+    color: var(--spice-text) !important;
+}
+
+/** Cards */
+.main-cardImage-imageWrapper {
+    background-color: transparent;
+    box-shadow: unset;
+    -webkit-box-shadow: unset;
+}
+
+.main-cardImage-imagePlaceholder, .main-cardImage-image {
+    border-radius: var(--cover-border-radius);
+}
+
+.main-rootlist-rootlistDivider {
+    background-color: unset;
+}
+
+.main-nowPlayingBar-nowPlayingBar {
+    height: var(--bar-height);
+}
+
+.Root__top-bar {
+    border-radius: var(--main-corner-radius) var(--main-corner-radius) 0 0;
+    z-index: 8;
+}
+
+.main-topBar-background {
+    border-radius: var(--main-corner-radius) var(--main-corner-radius) 0 0;
+}
+
+.Root__main-view {
+    background-color: var(--spice-main);
+    border-radius: var(--main-corner-radius) var(--main-corner-radius) 0 0;
+    overflow: hidden;
+}
+
+/*hide friend activity sidebar*/
+/*.main-buddyFeed-buddyFeed {
+    display: none;
+}*/
+
+.main-buddyFeed-buddyFeed {
+    box-shadow: unset;
+    -webkit-box-shadow: unset;
+    z-index: 0;
+}
+
+.main-buddyFeed-activityMetadata {
+    margin-left: 24px;
+}
+
+.main-buddyFeed-headerTitle,
+.main-buddyFeed-activityMetadata .main-buddyFeed-username a {
+    color: var(--spice-sidebar-text);
+}
+
+.main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName a,
+.main-buddyFeed-activityMetadata .main-buddyFeed-playbackContextLink,
+.main-buddyFeed-activityMetadata .main-buddyFeed-timestamp {
+    color: rgba(var(--spice-rgb-sidebar-text), 0.8);
+}
+
+.main-buddyFeed-buddyFeedRoot .main-avatar-avatar,
+.main-buddyFeed-buddyFeedRoot .main-buddyFeed-overlay {
+    width: 32px !important;
+    height: 32px !important;
+}
+
+.main-avatar-avatar.main-avatar-withBadge:after {
+    box-shadow: 0 0 0 2px var(--spice-sidebar);
+    background-color: var(--spice-pink);
+    right: 0;
+}
+
+.Root__now-playing-bar {
+    border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
+    background-color: unset;
+}
+
+.main-nowPlayingBar-container {
+    border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
+    background-color: unset;
+    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--spice-rgb-sidebar), 0.55), var(--spice-main) 60%);
+    border-top: 0;
+    min-width: 518px;
+}
+
+.main-connectBar-connectBar {
+    border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
+    border: 2px solid var(--spice-main);
+    border-top: 0;
+    color: var(--spice-sidebar-text);
+}
+
+/*"listening on" device bar*/
+.encore-dark-theme .encore-bright-accent-set {
+    --background-base: var(--spice-blue);
+    color: var(--spice-main);
+}
+
+.Root__nav-bar {
+    height: 100%;
+    z-index: 1;
+    width: var(--sidebar-width) !important;
+}
+
+.main-buddyFeed-buddyFeedRoot {
+    height: 100%;
+}
+
+.main-buddyFeed-buddyFeedRoot .os-content {
+    padding-top: 0 !important;
+}
+
+html,
+.Root__nav-bar,
+.main-buddyFeed-buddyFeed {
+    background-color: var(--spice-sidebar) !important;
+}
+
+html {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Root__nav-bar .link-subtle,
+.main-rootlist-rootlistItemLink:link,
+.main-rootlist-rootlistItemLink:visited,
+.main-rootlist-rootlistContent span,
+.main-navBar-entryPoints span {
+    color: var(--spice-sidebar-text)
+}
+
+.main-navBar-navBarItem {
+    padding: 0 8px;
+}
+
+#spicetify-show-list >* {
+    padding: 0 8px;
+}
+
+.main-rootlist-statusIcons {
+    color: var(--spice-sidebar-text);
+    padding-right: 16px;
+}
+
+.main-rootlist-statusIcons .main-playButton-button {
+    color: var(--spice-highlight);
+}
+
+.main-rootlist-expandArrow {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    color: var(--spice-sidebar-text) !important;
+    background-color: var(--spice-button);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--spice-sidebar);
+    opacity: 0;
+}
+
+li.GlueDropTarget:hover .main-rootlist-expandArrow {
+    opacity: 1;
+}
+
+html:not(.sidebar-hide-text) .main-rootlist-expandArrow {
+    opacity: 1;
+}
+
+.main-rootlist-expandArrow::before {
+    font-size: 10px;
+    padding-bottom: 3px;
+}
+
+html.sidebar-hide-text .main-rootlist-expandArrow {
+    right: 4px;
+}
+
+html.sidebar-hide-text .main-navBar-navBarItem a span,
+html.sidebar-hide-text .main-rootlist-rootlistContent a span,
+html.sidebar-hide-text .main-rootlist-rootlistItem a span,
+html.sidebar-hide-text .main-rootlist-statusIcons {
+    display: none;
+}
+
+.main-rootlist-rootlist {
+    margin-top: 0;
+}
+
+.Root__nav-bar .os-scrollbar-vertical,
+.main-buddyFeed-buddyFeedRoot .os-scrollbar-vertical {
+    display: none;
+}
+
+.playback-bar__progress-time,
+.main-playbackBarRemainingTime-container,
+.playback-bar__progress-time-elapsed {
+    display: none;
+}
+
+.playback-bar {
+    position: absolute;
+    width: var(--main-view-width);
+    left: var(--sidebar-width);
+    bottom: calc(var(--main-gap) + var(--bar-height) - 12px / 2);
+}
+
+.Root.is-connectBarVisible .playback-bar {
+    bottom: calc(var(--main-gap) + var(--bar-height) + 24px - 12px / 2);
+}
+
+.main-nowPlayingWidget-coverArt .cover-art {
+    width: var(--bar-cover-art-size) !important;
+    height: var(--bar-cover-art-size) !important;
+}
+
+.player-controls__buttons {
+    margin-bottom: 0;
+    width: 192px;
+}
+
+/*make all buttons orange*/
+.player-controls__left button, .player-controls__right button {
+    color: var(--spice-orange) !important;
+}
+
+/*repeat button, grey on no repeat*/
+.main-repeatButton-button[aria-checked="false"] {
+    color: var(--spice-text) !important;
+}
+
+/*shuffle button, grey on no shuffle*/
+.main-shuffleButton-button[aria-checked="false"] {
+    color: var(--spice-text) !important;
+}
+
+
+/*progress bar*/
+.progress-bar {
+    --progress-bar-height: 2px;
+    --fg-color: var(--spice-pink);
+    --bg-color: rgba(var(--spice-rgb-text), .2);
+}
+
+/*progress bar tooltip*/
+.playback-bar .prog-tooltip {
+    position: absolute;
+    min-width: 100px;
+    width: unset;
+    height: 25px;
+    top: -35px;
+    padding: 0 5px;
+    border-radius: 4px;
+    text-align: center;
+    color: var(--spice-main);
+    background-color: var(--spice-matcha);
+    opacity: 0;
+    transition: opacity 0.1s ease;
+        transition-property: opacity;
+        transition-duration: 0.1s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+}
+
+/*playback bar*/
+.playback-bar .playback-progressbar {
+    width: 100vw !important;
+}
+
+/*volume bar*/
+.volume-bar .playback-progressbar {
+    width: 10vw !important;
+}
+
+
+.minimal-player .player-controls__buttons {
+    width: 120px;
+    gap: 0px;
+}
+
+.minimal-player .player-controls__left,
+.minimal-player .player-controls__right {
+    --button-size: 16px !important;
+    gap: 0px;
+}
+
+.minimal-player .volume-bar {
+    flex: 0 1 70px;
+}
+.extra-minimal-player .player-controls__buttons {
+    width: 64px;
+}
+.extra-minimal-player .main-shuffleButton-button,
+.extra-minimal-player .main-repeatButton-button,
+.extra-minimal-player .ExtraControls__connect-device-picker,
+.extra-minimal-player .volume-bar .progress-bar-wrapper {
+    display: none;
+}
+.extra-minimal-player .volume-bar {
+    flex: 0 0 32px;
+}
+
+.main-trackInfo-name {
+    font-weight: 500;
+}
+
+.main-entityHeader-image {
+    border-radius: 5px;
+}
+
+.main-entityHeader-metaDataText,
+.main-duration-container {
+    color: var(--spice-blue);
+}
+
+/** Sidebar */
+.main-rootlist-rootlist .os-content {
+    padding: 0 0 8px 0 !important;
+}
+
+.main-rootlist-rootlistDividerContainer {
+    display: none;
+}
+
+.main-rootlist-rootlistItem a {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    height: 56px;
+    padding: 0 12px;
+}
+
+img.playlist-picture {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.main-rootlist-rootlistItem a span {
+    margin-left: 24px;
+}
+
+.main-rootlist-rootlistItem {
+    padding-left: calc(var(--indentation)*var(--left-sidebar-item-indentation-width));
+    padding-right: 0;
+    transition: padding-left .5s ease;
+}
+
+html.sidebar-hide-text .main-rootlist-rootlistItem {
+    padding: 0;
+}
+
+.main-rootlist-dropIndicator {
+    background: var(--spice-selection);
+    height: 2px;
+}
+
+.main-navBar-navBarLink {
+    height: 56px;
+}
+
+.main-navBar-navBarItem .collection-active-icon,
+.main-navBar-navBarItem .collection-icon,
+.main-navBar-navBarItem .home-active-icon,
+.main-navBar-navBarItem .home-icon,
+.main-navBar-navBarItem .search-active-icon,
+.main-navBar-navBarItem .search-icon {
+    flex: 0 0 auto;
+    margin-right: 8px;
+}
+
+.main-collectionLinkButton-icon,
+.main-createPlaylistButton-icon,
+.main-collectionLinkButton-icon {
+    margin-right: 24px;
+}
+
+li.GlueDropTarget {
+    padding: 0 8px;
+}
+
+/** OS-specific window controls dodge */
+.spotify__os--is-windows .main-navBar-navBar {
+    padding-top: calc(var(--os-windows-icon-dodge) * 24px);
+}
+
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-windows .main-navBar-entryPoints {
+    padding-top: calc(var(--os-windows-icon-dodge) * 12px + 12px);
+}
+
+.spotify__os--is-windows .main-buddyFeed-header {
+    padding-top: calc(var(--os-windows-icon-dodge) * 32px);
+}
+
+.spotify__container--is-desktop.spotify__os--is-windows[dir=ltr] .main-topBar-container {
+    padding-right: calc(var(--os-windows-icon-dodge) * 135px + 32px);
+}
+
+.main-topBar-container {
+    max-width: unset;
+}
+
+/** Linux-specific remove padding */
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-linux .main-navBar-entryPoints,
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-linux .main-navBar-navBar {
+    padding-top: 0;
+}
+
+/** Custom elements */
+#dribbblish-sidebar-fade-in {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(to top, var(--spice-sidebar) 10%, transparent);
+    z-index: 3;
+    pointer-events: none;
+}
+.dribs-playlist-list {
+    padding-bottom: 56px;
+}
+/*#dribbblish-back-shadow {
+    position: fixed;
+    width: var(--main-view-width);
+    height: calc(var(--main-view-height) + var(--bar-height));
+    box-shadow: 0 0 10px 3px #0000003b;
+    border-radius: var(--main-corner-radius);
+    z-index: 2;
+    pointer-events: none;
+}*/
+
+.playback-bar:hover .prog-tooltip {
+    opacity: 1;
+}
+
+/** Rearrange player bar */
+.main-nowPlayingBar-left {
+    order: 1;
+    flex: 1;
+    width: auto;
+    min-width: 0 !important;
+}
+
+.main-nowPlayingBar-center {
+    order: 0;
+    flex: 1;
+    width: auto;
+    min-width: unset !important;
+}
+
+.main-nowPlayingBar-right {
+    order: 2;
+    flex: 1;
+    width: auto;
+    min-width: unset !important;
+}
+
+.main-nowPlayingWidget-nowPlaying {
+    justify-content: center;
+}
+
+.main-trackInfo-container > div > div::before,
+.main-trackInfo-container > div > div::after {
+    background: unset;
+}
+
+.player-controls {
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.main-playPauseButton-button {
+    background-color: transparent;
+}
+
+/*play pause button bottom*/
+.main-playPauseButton-button svg {
+    width: 32px !important;
+    height: 32px !important;
+    color: var(--spice-orange);
+}
+
+/*control buttons on play bar*/
+.control-button {
+    color: var(--spice-sidebar-text);
+}
+
+/*control buttons on play bar hover*/
+.control-button:hover {
+    color: var(--spice-text);
+}
+
+/*play control bar heart unchecked / playing bar heart unchecked */
+.control-button-heart[aria-checked=false], .main-trackList-rowHeartButton[aria-checked=false] {
+    color: var(--spice-text);
+}
+/*heart hover */
+.control-button-heart[aria-checked=false]:hover, .main-trackList-rowHeartButton[aria-checked=false]:hover,
+.main-addButton-button[aria-checked=false]:hover {
+    color: var(--spice-pink);
+}
+/*heart tab hover, heart hover, hover over liked songs tab, hover*/
+.main-likedSongsButton-likedSongsIcon:hover svg {
+    fill: var(--spice-pink);
+} 
+/*hover over heart tab when in liked songs playlist*/
+/*div.GlueDropTarget.personal-library >*.active .main-likedSongsButton-likedSongsIcon:hover svg {fill: var(--spice-blue);}*/
+
+img[alt="Liked Songs"] {
+    display: none !important;
+}
+
+/*play control bar heart checked / playing bar heart checked */
+.control-button-heart[aria-checked=true], .main-trackList-rowHeartButton[aria-checked=true],
+.main-addButton-button[aria-checked=true] {
+    color: var(--spice-pink);
+}
+
+/*plus add button tab hover */
+.main-createPlaylistButton-createPlaylistIcon:hover svg {
+    fill: var(--spice-matcha);
+}
+
+/*episode podcast button hover*/
+.main-yourEpisodesButton-yourEpisodesIcon:hover svg path {
+    fill: var(--spice-teal);
+}
+
+
+
+/** Main container */
+.contentSpacing,
+.artist-artistDiscography-headerContainer {
+    padding-left: 18px;
+    padding-right: 36px;
+}
+
+/*hovering over a track / hover over a track / hover over track*/
+.main-trackList-trackListRowGrid:hover {
+    background-color: var(--spice-selection);
+/*    transition: 0.1s;*/
+    border-radius: 10px;
+}
+
+/*currently playing track*/
+.main-trackList-active {
+    color: var(--spice-pink);
+}
+
+
+/*right click track*/
+.main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover {
+    background-color: rgba(var(--spice-rgb-matcha), 1);
+}
+
+/*prevent highlighting column name grid header*/
+.main-trackList-trackListHeaderRow, .main-trackList-trackListHeaderRow:hover {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    color: var(--spice-blue);
+    height: 100%;
+    background-color: var(--spice-main);
+}
+
+/*change grid column names to blue*/
+.main-trackList-trackListHeaderRow .main-trackList-sortable {
+    color: var(--spice-blue);
+}
+
+/*artist name colour*/
+.main-trackList-rowSubTitle .standalone-ellipsis-one-line .main-type-mesto {
+    color: var(--spice-teal) !important;
+}
+
+/*artist name in play bar*/
+.LBeI_sl8sCSYFu5fPTsO, .LBeI_sl8sCSYFu5fPTsO .main-type-finale, .main-type-finale a {
+    color: var(--spice-orange) !important;
+}
+
+
+
+@media (min-width: 1280px) {
+    .contentSpacing,
+    .artist-artistDiscography-headerContainer {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
+}
+
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-icon,
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText,
+.main-createPlaylistButton-button {
+    opacity: 1;
+}
+
+.main-likedSongsButton-likedSongsIcon,
+.main-yourEpisodesButton-yourEpisodesIcon,
+.main-createPlaylistButton-createPlaylistIcon {
+    background: unset !important;
+}
+
+.main-createPlaylistButton-icon,
+.main-collectionLinkButton-icon,
+.main-createPlaylistButton-icon {
+    height: 40px;
+}
+
+.main-likedSongsButton-likedSongsIcon svg,
+.main-yourEpisodesButton-yourEpisodesIcon svg,
+.main-createPlaylistButton-createPlaylistIcon svg {
+    fill: var(--spice-sidebar-text);
+    width: 32px;
+    height: 32px;
+}
+.main-yourEpisodesButton-yourEpisodesIcon svg path {
+    fill: var(--spice-sidebar-text);
+}
+
+/** Grid */
+.Root__top-container {
+    grid-template-areas:
+        "nav-bar main-view buddy-feed"
+        "nav-bar now-playing-bar buddy-feed";
+    padding: var(--main-gap) 0;
+}
+
+html:not(.buddyfeed-visible) .Root__top-container {
+    padding-right: var(--main-gap);
+}
+
+/** Minimal profile button */
+span.main-userWidget-displayName,
+.main-userWidget-box svg {
+    display: none;
+}
+
+
+/** Sidebar home explore library icons */
+.Root__nav-bar .link-subtle, .main-rootlist-rootlistItemLink:link, .main-rootlist-rootlistItemLink:visited, 
+.main-rootlist-rootlistContent span, .main-navBar-entryPoints span {
+    color: var(--spice-sidebar-text);
+}
+.main-rootlist-rootlistItemLink:visited, 
+.main-rootlist-rootlistContent:hover span, .main-navBar-entryPoints:hover span {
+    color: var(--spice-blue);
+    fill: var(--spice-blue);
+    background-color: var(--spice-selection);
+}
+
+
+
+#dribs-hidden-list {
+    background-color: rgba(var(--spice-rgb-main), .3);
+}
+
+#dribs-sidebar-config {
+    position: relative;
+    width: 100%;
+    height: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: -30px;
+    left: 0;
+}
+
+#dribs-sidebar-config button {
+    min-width: 60px;
+    border-radius: 3px;
+    background-color: var(--spice-main);
+    color: var(--spice-text);
+    border: 1px solid var(--spice-text);
+}
+#dribs-sidebar-config button:disabled {
+    color: var(--spice-selection);
+}
+
+.main-navBar-entryPoints {
+    --left-sidebar-padding-left: 24px;
+    --left-sidebar-padding-right: 24px;
+}
+
+div.GlueDropTarget.personal-library  {
+    padding: 0 8px;
+}
+div.GlueDropTarget.personal-library >* {
+    padding: 0 16px;
+    height: 56px;
+    border-radius: 4px;
+}
+
+div.GlueDropTarget.personal-library >*.active {
+    background: var(--spice-button);
+}
+
+/** Big cover, small cover */
+.main-coverSlotExpanded-container {
+    position: fixed;
+    z-index: 2;
+    width: 250px;
+    height: 250px;
+    bottom: calc(var(--main-gap) + var(--bar-height) + 10px);
+    left: calc(var(--sidebar-width) + 10px);
+}
+
+.Root.is-connectBarVisible .main-coverSlotExpanded-container {
+    bottom: calc(var(--main-gap) + var(--bar-height) + 24px + 10px);
+}
+
+html.right-expanded-cover .main-coverSlotExpanded-container {
+    right: calc(var(--main-gap) + 10px);
+    left: unset;
+}
+
+html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
+    right: calc(var(--main-gap) + var(--buddy-feed-width) + 10px);
+    left: unset;
+}
+
+.main-coverSlotExpanded-container img {
+    border-radius: 4px;
+}
+
+.cover-art {
+    border-radius: 4px;
+}
+
+.main-nowPlayingWidget-coverExpanded .main-coverSlotCollapsed-container {
+    opacity: 0;
+}
+
+.main-nowPlayingWidget-coverExpanded {
+    transform: translateX(-27px);
+}
+
+/** Mini dribbblish */
+.x-categoryCard-CategoryCard > div {
+    background-color: var(--spice-main);
+    width: calc(100% - 14px);
+    height: calc(100% - 6px);
+    margin: 3px 10px;
+    border-radius: 5px;
+}
+
+.x-categoryCard-CategoryCard {
+    height: 100px;
+}
+
+.x-categoryCard-image {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.x-heroCategoryCard-HeroCategoryCard > div {
+    background-color: var(--spice-main);
+    width: calc(100% - 20px);
+    height: calc(100% - 6px);
+    margin: 3px 16px;
+    border-radius: 5px;
+}
+
+.main-dropDown-dropDown,
+.x-sortBox-sortDropdown {
+    background-color: rgba(var(--spice-rgb-selection), .1) !important;
+}
+
+.connect-device-list-item:focus,
+.connect-device-list-item:hover {
+    background-color: rgba(var(--spice-rgb-selection), .3);
+}
+
+.bookmark-filter {
+    color: var(--spice-main) !important;
+}
+
+/* 1.1.56 */
+.main-navBar-navBar {
+    width: var(--sidebar-width) !important;
+}
+
+.main-entityHeader-container.main-entityHeader-nonWrapped {
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+@media (min-width: 1024px) {
+    .main-entityHeader-container.main-entityHeader-nonWrapped {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
+}
+
+.main-userWidget-dropDownMenu > li > button {
+    color: rgba(var(--spice-rgb-selection), .7);
+    padding-left: 8px;
+    text-decoration: none;
+}
+.main-userWidget-dropDownMenu > li > button:hover,
+.main-userWidget-dropDownMenu > li > button:focus {
+    background-color: var(--spice-selection);
+    color: var(--spice-text);
+}
+
+.main-userWidget-dropDownMenu svg {
+    position: unset;
+}
+.main-userWidget-dropDownMenu > li svg {
+    position: absolute;
+}
+.main-buddyFeed-buddyFeed.main-buddyFeed-buddyFeed-expanded {
+    z-index: 4;
+}
