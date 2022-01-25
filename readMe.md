@@ -1,7 +1,7 @@
 
 spicetify theme is a modification of the dribblish theme. 
 obsidian theme is a (very big?) modification of the minimal theme.
-firefox theme is a modification of the minimal-functional-fox theme
+firefox theme is a modification of the minimal-functional-fox theme, intended to be used with the tree-style tabs plugin
 
 
 colours used :
