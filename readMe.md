@@ -1,4 +1,8 @@
 
+spicetify theme is a modification of the dribblish theme. 
+obsidian theme is a (very big?) modification of the minimal theme.
+
+
 
 colours used :
 
