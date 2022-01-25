@@ -1,0 +1,677 @@
+@import url("userChrome.css");
+
+ :root {
+
+  --pink  : #E07A9D; 
+  --orange: #E9AC7F; 
+  --matcha: #9CC087; 
+  --teal  : #559988; 
+  --blue  : #8EB5DE; 
+  --purple: #A59CF5; 
+
+  --greybe: #bebebf;
+  --grey6f: #66666f;
+  --grey29: #292929;
+  --grey24: #242424;
+  --grey1e: #1e1e1e; 
+  --grey0f: #0f0f0f;
+
+  --dark: #161315;
+
+  --background-primary: var(--grey29);
+  --background-secondary: var(--grey24);
+
+
+  --background: var(--background-primary);
+  --color: var(--grey6f);
+
+  --lightpink: #FFAAC7;
+  --autopink: #f9c0c8;
+
+  /*pdfs*/
+  --toolbar-border-color: var(--background-primary) !important;
+  --errorWrapper-bg-color: var(--pink) !important;
+  --progressBar-color: var(--pink) !important;
+  --dropdown-btn-bg-color: var(--grey1e) !important;
+  --field-bg-color: var(--grey1e) !important;
+  --field-color: var(--greybe) !important;
+  --separator-color: var(--grey1e) !important;
+  --doorhanger-bg-color: var(--grey1e) !important;
+  --doorhanger-border-color: var(--grey1e) !important;
+
+}
+
+:host, :root {
+  --in-content-page-background: rgb(36,36,36) !important;
+}
+
+/*all websites*/
+body, .background, #toolbarViewer {
+  color: var(--grey6f) !important;
+  background: var(--background-primary) !important;
+  background-color: var(--background-primary) !important;
+  font-family: Dank Mono !important;
+}
+a {color: var(--blue) !important;}
+a:visited {color: var(--purple) !important;}
+/*pdfs*/
+.pdfViewer .page {filter: invert(0.84) hue-rotate(161deg) saturate(80%); border: none !important;}
+.toolbarField {border-color: #242424 !important;}
+
+/*apple*/
+#ac-globalnav, #ac-globalfooter{background: var(--background-primary) !important;}
+
+/* Removes white loading page */
+@-moz-document url(about:blank), url(about:newtab), url(about:home) {
+    html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {background: var(--mff-bg) !important;}
+}
+
+/* Hide scrollbar */
+:root{scrollbar-width: none !important;}
+@-moz-document url(about:privatebrowsing) {
+    :root{scrollbar-width: none !important;}
+  }
+
+@-moz-document url(about:blank) { 
+body {}
+}
+
+@-moz-document url(about:addons) { 
+body {font-size: 12px !important;}
+.card {background: var(--background-primary) !important;}
+}
+
+
+
+
+/*import css for individual websites*/
+/*@import url("css_websites/google.css");
+@import url("css_websites/gmail.css");
+@import url("css_websites/github.css");
+@import url("css_websites/pinterest.css");
+@import url("css_websites/youtube.css");
+@import url("css_websites/brew.css");
+*/
+
+/*google*/
+@-moz-document domain(google.com) { 
+body, html, a, div {
+  color: #66666f;
+  font-family: Dank Mono !important;
+ }
+ body, html, a {background-color: var(--background-primary) !important;}
+ .yg51vc, .appbar, .f6F9Be {background-color: var(--background-primary) !important;}
+ .b2hzT, #swml {border: none !important;}
+ /*"from your ip address", "update location"*/
+ .KwU3F, .xSQxL {color: var(--lightpink) !important;}
+
+/*search bar remove hover*/
+.minidiv .RNNXgb, .sfbg, .RNNXgb {background: var(--background-primary) !important;border: none !important;box-shadow: none !important;}
+.RNNXgb:hover, .sbfc .RNNXgb {background-color: var(--background-primary);box-shadow: none !important;border: none !important;}
+/* all the stupid different divs for results font*/
+.gLFyf, .gsfi, .lst {font-family: Dank Mono !important; font-size: 12px !important;}
+.std, .g, .q8U8x, .e9EfHf {font-family: Dank Mono !important; font-size: 12px !important;}
+h3 {font-family: Dank Mono !important;}
+a { font-family: CozetteVector !important; font-size: 12px !important; }
+.s75CSd {color: var(--grey6f) !important;}
+/*link title*/
+.MBeuO {font-family: Lora !important; font-size: 18px;}
+img[alt="Google"] {display: none !important;}
+#gb {background-color: var(--background-primary) !important;/*display: none !important;*/}
+/*answered question / top result */
+div[class="answered-question"] {background: var(--background-primary) !important;}
+/*"related searches"*/
+div[data-hveid="CCsQAA"] {background: var(--background-primary) !important;}
+/*"see more"*/
+.MXl0lf {background: var(--background-secondary) !important; border: none !important;}
+
+/*maps*/
+.id-content-container {filter: grayscale(0.23) hue-rotate(-10deg) saturate(0.9) !important;}
+/*.siAUzd-neVct-H9tDt {background: var(--background-primary) !important; color: var(--grey6f) !important; }*/
+.KY3DLe-settings-UDotu {background: transparent !important;}
+
+/*translate divs */
+.RvYhPd, .WFnNle, .MOkH4e, .hgbeOc {background-color: var(--background-primary) !important; background: var(--background-primary) !important; }
+.TcXXXb {color: var(--grey6f) !important;}
+
+}
+
+
+
+
+
+
+
+/*gmail*/
+@-moz-document domain(mail.google.com) { 
+
+html, body, span, div, table, td, input, textarea, select, p  {
+  background-color: var(--background-primary);
+  background: var(--background-primary);
+  color: #66666f;
+  font-family: Dank Mono !important;
+}
+
+/*all the clickable bits*/
+a {background-color: transparent !important;color: #66666f !important;}
+::after {background-color: transparent !important;}
+
+/*the gmail header with account settings, best not remove completely */
+#gb {background-color: var(--background-primary) !important;/*display: none !important;*/}
+
+/*the gmail logo*/
+.gb_nc {display: none !important;}
+
+/*right click menu ?*/
+.vY .nq {color: var(--grey6f) !important;}
+/*right click menu ?*/
+.J-M {background: var(--background-primary) !important; color: #66666f !important;}
+.J-M:hover {background: var(--background-primary) !important;}
+
+/*"me", for settings*/
+.gb_i.gb_Xa.gb_Za {background: var(--background-secondary) !important; border: none !important; box-shadow: none !important;}
+.gb_i.gb_Xa.gb_Za,.gb_i > .gb_7a, .gb_i .gb_8a, .gb_i .gb_9a, .gb_qb {background: var(--background-secondary) !important; color: var(--grey6f) !important;}
+/*"liiyung"*/
+.gb_i .gb_jb {background: var(--background-secondary) !important; color: var(--greybe) !important; font-family: Lora !important; font-size: 15px !important;}
+/*"y.liiyung@gmail.com"*/
+.gb_i .gb_lb {background: var(--background-secondary) !important; color: var(--purple) !important; font-family: CozetteVector !important; font-size: 12px !important;}
+.gb_Fb {border: none !important;}
+/*"manage your google account"*/
+.gb_pb.gb_pb {}
+/*"add another account"*/
+.gb_Ob, .gb_ub, .gb_yb {background: var(--background-secondary) !important;}
+/*"sign out"*/
+.gb_zb {border-bottom: 1px dashed !important; border-top: 1px dashed !important; background: var(--background-secondary) !important;}
+.gb_Ab.gb_Ab, .gb_Bb.gb_Bb {border: none !important;}
+a#gb_71 {color: var(--teal) !important;}
+
+/*base page*/
+/*the search email bar, search input, "search mail" placeholder, search dropdown*/
+#aso_search_form_anchor, #aso_search_form_anchor input, #aso_search_form_anchor input:placeholder, .ZF-zT  {
+  background: var(--background-primary) !important;
+  background-color: var(--background-primary) !important;
+  font: normal 12px Dank Mono !important;
+  font-family: Dank Mono !important;
+  font-size: 12px !important;
+  color: #66666f !important;
+  border: none !important;
+ }
+/*search bar stubborn bits */
+.gb_ze, .gb_ze #form, #form .aso_search_form_anchor, input, #gs_lc50 input, input .gb_8e, input .gs_taif50, .gb_vc .gb_Ne,
+td, .gssb_a .gsfs .aqf { background: var(--background-primary) !important; background-color: var(--background-primary) !important; color: #66666f !important;}
+.gb_Le:not(.gb_we) button, .gb_tc .gb_Le {background: var(--background-primary) !important;}
+form[id="aso_search_form_anchor"] {background: var(--background-primary) !important;}
+/*all svgs in the gmail header */
+.gb_vc svg, .gb_Ac.gb_Ec svg, .gb_vc .gb_Wc .gb_Zd, .gb_vc .gb_Wc .gb_uc, .gb_vc .gb_Wc .gb_Zc, .gb_Ac.gb_Ec .gb_Zd {color: #66666f !important;}
+/*the compose button*/
+.z0 > .L3 {background-color: var(--background-primary) !important; box-shadow: none !important;}
+/*compose button plus "+"" image*/
+.z0 > .L3::before {background-image: url("assets/create_32dp.png") !important;}
+/*get rid of the stupid big circle effect when hovering over toolbar*/
+.asa::before {border: none !important; background-color: transparent !important;}
+/*memory space used bar*/
+.aiC {background-color: var(--grey24) !important;}
+.aiA {background-color: var(--pink) !important;}
+/*left sidebar*/
+/*left sidebar margin*/
+.aeN {margin-left: 5vw !important;}
+/*left sidebar text*/
+.TO .nU > .n0, .TO.NQ .nU > .n0, .TO.nZ .nU > .n0, .ah9 > .CJ, .n3 > .CL > .CK {
+    -moz-osx-font-smoothing: grayscale;
+    font-family: CozetteVector !important;
+    font-size: 13px !important;
+    color: rgba(102,102,111,1) !important;
+    text-shadow: none !important;
+}
+/*left sidebar numbers*/
+div .bsU {color: var(--teal) !important; text-shadow: none !important;}
+/*extend to full height*/
+/*div[class="Ls77Lb aZ6"], .pp, div[id=":15z"], .nM, .aic, .yj, div[role="navigation"] {height: 100% !important;}*/
+/*hide meeting and hangouts*/
+.akc .aZ6 .YX, div[aria-label="Meet"], div[aria-label="Hangouts"], .aeO, .aeQ {display: none !important; height: 0px !important;}
+/*right sidebar*/
+/* bottom right hider */
+.aT5-aOt-I {opacity: 0.2 !important;}
+/*right margin*/
+.bkK {margin-right: 7vw !important;}
+
+
+
+
+/*email grid*/
+/*email table stupid box shadow upon hover*/
+.zA {box-shadow: none! important;}
+/*email table title and preview font? */
+/*td { font-size: 11px !important;}*/
+/*unread and read stubborn "padding" colours*/
+.zE, .x7, .yO {background: var(--background-primary) !important; background-color: var(--background-primary) !important; color: #66666f !important; }
+/*sender, unread*/
+span .zF {font-family: CozetteVector !important; font-size: 12px !important; color: rgba(190, 190, 191, 0.7) !important;}
+/*title, unread*/
+.zF, .bqe, .bq3 {font-size: 13px !important; color: rgba(190, 190, 191, 0.7) !important;}
+/*sender, read*/
+span .yP {font-family: CozetteVector !important; font-size: 12px !important;}
+/*title, read*/
+.bog {font-size: 13px !important;}
+/*preview unread and read */
+.y2 {font-size: 10px !important;}
+/*"everything else"*/
+.qh {text-shadow: none; color: var(--blue) !important; font-family: Dank Mono !important;}
+/*get rid of stupid hover effect over "everything else", inbox section headers */
+.Wr::before {background: transparent !important;}
+/*get rid of stupid hover effect over every button in email table*/
+.xY > .T-Jo::before, .a9q::before {border:  none !important;background: transparent !important;}
+.xY > .T-Jo:focus, .xY > .T-Jo:hover, .xY > .T-Jo:active {border:  none !important;color: transparent !important;}
+/*drag selector*/
+.aqw > td.oZ-x3::before {display: none !important;}
+/*get rid of checkbox opacity effect*/
+.xY > .T-Jo, .xY > .T-Jo:hover {opacity: 1 !important;}
+/*checkbox unchecked, email grid and top bar*/
+.xY > .T-Jo, .G-tF .T-Jo {background-image: url("assets/uncheck_box_grey_20dp.png") !important;}
+/*checkbox checked, email grid and top bar*/
+.xY > .T-Jo-Jp,
+.G-tF .T-Jo-Jp {background-image: url("assets/check_box_pink_20dp.png") !important;}
+/* email table star*/
+td.apU > .T-KT.aXw::before {background-image: url('assets/unstarred.png') !important;opacity: 0.4 !important;}
+/*email table starred*/
+.T-KT-Jp::before {background-image: url("assets/starred.png") !important;}
+/*email table important marked*/
+.a9q.pH, .aoj {background-image: url("assets/important.png") !important; z-index: 9 !important;}
+/*email table important unmarked*/
+.a9q {background-image: url("assets/unimportant.png") !important;}
+/*number of replies in thread text*/
+.bx0 {color: var(--teal) !important; margin-left: 6px !important;}
+/* email grid, "has attachment" attachment clip */
+.yE, .HS {background-image: url("assets/attachment_pink_20dp.png") !important; opacity: 1 !important;}
+/*notification after performing action*/
+.b8 .vh, .cc .vh, .bAo, .b8 .bBe, .aT {background-color: var(--pink) !important; background: var(--pink) !important; border: none !important; box-shadow: none !important;}
+/*notification "undo"*/
+div.b8 .a8k, .bAo > .ad {background-color: var(--pink) !important; background: var(--pink) !important; color: var(--background-primary) !important; border-radius: 0px !important;}
+.bAq {background-color: var(--pink) !important; background: var(--pink) !important; color: var(--background-primary) !important;}
+/*searching "loading" popup*/
+.vZ {background-color: var(--pink) !important;}
+.v1, .vX .vh {background-color: var(--pink) !important; border: none !important; border-radius: 6px !important;}
+/*.J-J5-Ji {background: var(--pink) !important; background-color: var(--pink) !important;}*/
+/*"no results for"*/
+.Wz { background-color: var(--background-primary) !important; color: var(--pink) !important; border: none !important;}
+
+
+/*email thread*/
+/*top bar*/
+.G-tF img {opacity: 0.5 !important; }
+/*title*/
+.ha > .hP {font-family: Lora !important; color: var(--greybe) !important; }
+/*from*/
+.go {color: var(--purple) !important; font-family: CozetteVector !important;}
+/*down button for more sender/receiver information, border*/
+.ajA {background-color: var(--grey29) !important;}
+.SK {box-shadow: none !important; border: none !important;}
+/*"reply, reply all, forward"*/
+.amn > .ams {box-shadow: none !important;}
+/*contact card*/
+img[id=":ie_4-c"] {opacity: 0 !important; background-color: #66666f !important; } 
+/*email images*/
+tbody img {filter: grayscale(36%);}
+/*reply thread expander*/
+.bh > .adv .adx {background-color: transparent !important; box-shadow: none !important; color: var(--tea) !important; }
+/*old thread expander*/
+.ajT img {opacity: 0.5 !important;}
+/* email thread attachment clip */
+.gW {background-image: url("assets/attachment_pink_20dp.png") !important; opacity: 1 !important;}
+/* unstarred */
+.bi4 > .T-KT:not(.T-KT-Jp):not(.byM)::before { background-image: url("assets/unstarred.png") !important }
+/*"new message from"*/
+.ata-asE {background-color: var(--background-primary) !important;}
+/*auto template replies*/
+.bra {color: var(--background-primary) !important; border: none !important; background-color: #817ABF !important; }
+
+
+/*compose*/
+div[id=":1em"] {background: var(--background-primary) !important;}
+.aoP .Ar {background-color: var(--background-primary) !important;}
+.GM .dL {background-color: var(--background-primary) !important;}
+div[id=":1fx"] {background: var(--background-primary) !important;}
+
+/*send*/
+div[id=":1d6"], div[id=":1d2"] {background: var(--pink) !important;}
+.hG.T-I-atl, .hG.T-I-atl.T-I-JW, .hG.T-I-atl:focus {border-left: 1px solid var(--pink) !important;}
+}
+
+
+/*github*/
+@-moz-document domain(github.com) { 
+
+:root {
+  --color-canvas-subtle: var(--background-primary) !important;
+  --color-canvas-default:  var(--background-primary) !important;
+  --color-btn-primary-bg: var(--matcha) !important;
+  --color-btn-primary-hover-bg: var(--matcha) !important;
+
+}
+
+html, body, span, div {
+  background-color: var(--background-primary) !important;
+  color: #66666f !important;
+  font-family: Dank Mono !important;
+  font-size: 12px !important;
+ }
+/*misc stubborn bits*/
+.Header, .dropdown-menu, .header-search-wrapper, .input-contrast {background-color: var(--background-primary) !important;}
+a {color: var(--blue) !important; font-family: CozetteVector !important;}
+
+/*notification*/
+.notification-indicator .mail-status {background-image: linear-gradient(#E07A9D, #E07A9D) !important;}
+
+.markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, 
+.markdown-body dl, .markdown-body table, .markdown-body pre, .markdown-body details {font-family: Dank Mono !important; font-size: 13px !important;}
+
+/*active colour*/
+.jump-to-suggestions-results-container [aria-selected="true"] .jump-to-suggestions-path, 
+.jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path {background: var(--background-primary) !important; background-color: var(--background-primary) !important;}
+
+h1, h2, h3 {font-family: Lora !important;}
+
+}
+
+
+/*wikipedia*/
+@-moz-document domain(wikipedia.org) { 
+
+:root {
+  --tertiary-low-or-tertiary-high: var(--purple) !important;
+}
+
+/*invert images for all the stupid latex*/
+img {filter: invert(0.8) !important;}
+/*invert wiki logo*/
+#p-logo a {filter: invert(0.84)}
+/*search*/
+.vector-search-box-input{background-color: rgba(53, 53, 53, 0.5) !important;}
+/*"article, talk, read, edit, view history"*/
+.vector-menu-tabs, .vector-menu-tabs a, #mw-head .vector-menu-dropdown h3 {background-image: none !important; background: var(--background-primary) !important; padding-bottom: 7px !important;}
+#mw-head { background: var(--background-primary) !important; }
+.mw-body, .parsoid-body, .toc, .toccolours,
+.wikitable {background: var(--background-primary) !important; background-color: var(--background-primary) !important;color: var(--grey6f) !important; border: none !important;}
+.wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wikitable > * > tr > td {border: 1px solid #2d2d2d !important;}
+h1[id="firstHeading"] {color: var(--pink) !important; font-family: Lora !important; font-weight: 300 !important;}
+span[class="mw-headline"] {color: var(--purple) !important; font-family: Lora !important; font-weight: 250 !important;}
+.vector-body .toc h2 {font-family: Lora !important; color: #bebebf !important; font-weight: 250 !important;}
+.toctogglelabel {color: var(--teal) !important;}
+.mw-parser-output .sidebar {background: var(--background-secondary) !important; border: 1px solid var(--background-secondary) !important;}
+/*"edit"*/
+.mw-editsection a {color: var(--teal) !important; box-shadow: none !important;}
+/*header*/
+h1, h2 {border-bottom: 3px double #848484 !important;}
+/*infobox*/
+.infobox {border: 1px solid var(--background-secondary) !important; background-color: var(--background-secondary) !important; color: var(--grey6f) !important;}
+
+.tocnumber {color: #464646 !important;}
+div.thumbinner {border: 1px solid var(--background-secondary) !important; background-color: var(--background-secondary) !important;}
+.thumbimage {background-color: transparent !important;border: none !important;}
+
+.mw-parser-output .navbox, .mw-parser-output .navbox-subgroup { background-color: var(--background-primary) !important; }
+.mw-parser-output .navbox { border: none !important; }
+.mw-parser-output .navbox-title {background-color: #454657 !important;}
+
+.catlinks {border: none !important; background-color: var(--background-secondary) !important;}
+
+}
+
+
+/*twitter*/
+@-moz-document domain(twitter.com) { 
+:root {
+  --tertiary-low-or-tertiary-high: var(--purple) !important;
+}
+
+.css-1dbjc4n {border: none !important;}
+div[class="css-1dbjc4n"] { background: var(--background-primary) !important; }
+
+}
+
+
+
+
+
+/*obsidian*/
+@-moz-document domain(obsidian.md) { 
+
+:root {
+  --tertiary-low-or-tertiary-high: var(--purple) !important;
+  
+}
+
+.names .user-title { background-color: var(--orange) !important; }
+  
+}
+
+
+/*pinterest*/
+@-moz-document domain(pinterest.com) { 
+html, body, span, div {
+  background-color: var(--background-primary) !important;
+  color: #66666f !important;
+  font-family: Dank Mono !important;
+  font-size: 12px !important;
+ }
+
+a {color: #9CC087 !important;}
+
+h1, h2, h3 {font-family: Lora !important;}
+}
+
+
+/*etsy*/
+@-moz-document domain(etsy.com) { 
+html, body, span, div {
+  background-color: var(--background-primary) !important;
+  color: #66666f !important;
+  font-family: Dank Mono !important;
+  font-size: 12px !important;
+ }
+
+a {color: #9CC087 !important;}
+
+h1, h2, h3 {font-family: Lora !important;}
+/*general etsy*/
+.wt-btn.wt-btn--primary:not(:disabled):hover, body:not(.wt-focus-visible) .wt-btn.wt-btn--primary:not(:disabled):focus, 
+.wt-btn.wt-btn--filled:not(:disabled):hover, body:not(.wt-focus-visible) .wt-btn.wt-btn--filled:not(:disabled):focus {color: var(--grey1e) !important;}
+/*item page*/
+/*image left right buttons*/
+.wt-btn.wt-btn--primary.wt-btn--light::after, .wt-btn.wt-btn--filled.wt-btn--light::after {background-color: var(--background-primary) !important; border-color: var(--background-primary) !important;}
+.wt-btn.wt-btn--filled.wt-btn--light:not(:disabled):hover {background-color: var(--background-primary) !important; border-color: var(--background-primary) !important;}
+/*"buy now"*/
+.wt-btn.wt-btn--secondary, .wt-btn.wt-btn--outline {color: var(--pink) !important;background: var(--grey1e) !important;} 
+/*"add to cart"*/
+.wt-btn.wt-btn--primary, .wt-btn.wt-btn--filled div {background-color: var(--background-primary) !important; color: var(--pink) !important;}
+}
+
+
+/*youtube*/
+@-moz-document domain(youtube.com) { 
+/*page background colours*/
+#container.ytd-masthead,
+.ytd-app:not([use-content-visibility]) #page-manager.ytd-app {background: var(--background-primary) !important;}
+/*searchbar*/
+#container.ytd-searchbox,
+#search-icon-legacy.ytd-searchbox {background-color: var(--background-primary) !important; border: none !important; box-shadow: none !important}
+#container.ytd-searchbox input.ytd-searchbox {color: var(--grey6f) !important ;font-family: Dank Mono !important;}
+.sbsb_a, .sbfl_b, .sbqs_c {background: var(--background-primary) !important; color: var(--grey6f) !important;}
+/*replies*/
+#content-text.ytd-comment-renderer {font-family: Dank Mono !important; font-size: 12px !important; color: var(--grey6f) !important;}
+/*reply and expand reply buttons*/
+ytd-button-renderer yt-formatted-string.ytd-button-renderer {color: var(--blue) !important; font-family: CozetteVector !important; font-size: 12px !important;}
+/* search and suggestion video titles*/
+#video-title.ytd-video-renderer, #video-title.ytd-compact-video-renderer {font-family: Lora !important; font-size: 12px !important; color: var(--greybe) !important;}
+/*metadata preview*/
+.metadata-snippet-text.ytd-video-renderer { font-family: Dank Mono !important; }
+
+/*"favorite shop" button*/
+button div, button span {background: #1e1e1e !important;}
+.wt-btn.wt-btn--small {background: #1e1e1e !important;}
+.ui-toolkit .etsy-icon svg {background: #1e1e1e !important;}
+.wt-btn.wt-btn--small span {background: #1e1e1e !important;}
+
+}
+
+
+
+/*cuhk*/
+@-moz-document domain(cuhk.edu.hk) { 
+:root {
+  --tertiary-low-or-tertiary-high: var(--purple) !important;
+}
+
+/*blackboard*/
+/* blackboard left picture*/
+.illustrationClass {filter: invert(0.84) hue-rotate(100deg) grayscale(0.2) !important; background-image: url(/adfs/portal/illustration/illustration.jpg?id=FD92FB3733431250071B684D8684D436D871CC44190A532B0F39E26868FF3B0D);}
+/*sign in column*/
+#contentWrapper {background-color: var(--background-primary) !important;}
+img[id="companyLogo"] {filter: invert(0.84) hue-rotate(140deg) !important;}
+.icon00 {filter: invert(0.84) hue-rotate(50deg) !important;}
+.imgCUHKITSC {filter: invert(0.84) hue-rotate(180deg) saturate(1.5) !important;}
+.loginForm_CADS_Logo {filter: invert(0.84) hue-rotate(210deg) saturate(0.7) !important;}
+/* sign in submit button */
+span.submit, input[type="submit"] {background-color: var(--background-secondary) !important; border: none !important; color: var(--grey6f) !important; border-radius: 6px !important; padding: 9px 20px 9px 20px !important;}
+input.text {border: none !important; background: var(--background-secondary) !important; border-radius: 7px !important;  color: var(--greybe) !important;}
+/*the divs in blackboard*/
+.isUltra #menuWrap, .isUltra #courseMenuPalette, .isUltra #courseMenuPalette ul, 
+.isUltra #courseMenuPalette h3 a, .isUltra #previewCourseMenu h3 a, .isUltra #courseMenuPalette div.navPaletteContent, 
+.isUltra #courseMenuPalette_contents li, .isUltra #courseMenuPalette div.navPaletteContent ul li a span, 
+.isUltra .navPaletteContent h3 a.submenuLink::before, .isUltra .navPaletteContent h3 a.submenuLink_active::before, 
+.isUltra div.navPaletteContent ul li a, .isUltra div.navPaletteContent ul li a span, .isUltra .navPaletteContent .subhead {background-color: var(--background-primary) !important; color: var(--grey6f) !important;}
+.base #side-menu, .base .color-selection-preview-mode {background-color: var(--background-primary) !important;}
+/*main*/
+.base #main-content #main-content-inner {background: var(--background-primary) !important;}
+
+/*cusis*/
+.ps_header_bar {border-bottom: 1px solid var(--background-primary) !important; background: var(--background-primary) !important;}
+.nuilppnl .lptabpnl.fade .ps_box-scrollarea-row {background: var(--background-primary) !important;}
+/* the boxes */
+.nuitile .nuilp {border: 1px solid var(--background-secondary) !important; background: var(--background-secondary) !important; color: var(--grey6f) !important; border-radius: 7px !important;}
+.nuitile .ps_groupleth {font-family: CozetteVector !important; font-weight: 250 !important; text-align: center !important; color: white !important;}
+.nuitile .ps_groupleth > .ps-label {color: var(--grey6f) !important; font-weight: 250 !important;}
+.lpfooter {background: var(--background-primary) !important;}
+
+
+
+
+}
+
+
+
+
+
+/*homebrew*/
+@-moz-document domain(brew.sh) { 
+body{color: var(--orange) !important;}
+h1 a, h1 a:hover, h2, h3 {color: var(--orange) !important;}
+}
+
+/*coolors*/
+@-moz-document domain(coolors.co) { 
+#header {background: var(--background-primary) !important;}
+h1 a, h1 a:hover, h2, h3 {color: var(--orange) !important;}
+}
+
+
+/*shein cart*/
+@-moz-document url(https://www.shein.com/cart) { 
+body, div {background: var(--background-primary) !important; background-color: var(--background-primary) !important;}
+}
+
+/*shein*/
+@-moz-document domain(shein.com) { 
+body, div, span {color: var(--grey6f) !important;}
+
+h1, h2, h3, h4, h5, h6 {color: var(--purple) !important;}
+/*header*/
+.row {background: var(--background-primary) !important;}
+.c-header2 .header-wrap .header-logo, .c-header2 .header-right,
+.c-header2 .header-right .header-right-dropdown-ctn > a.header-right-global { background-color: var(--background-primary) !important; }
+.c-header2 .header-left .first-cate-ctn .first-cate.cate-active {background-color: var(--background-primary);}
+[mir] .product-list-v2 .top-info {background-color: var(--background-primary) !important;}
+[mir] .product-list-v2 .cloud-tags__item {background-color: var(--teal) !important;}
+/*slider tags*/
+.style-gallery-label .swiper-slide {background: var(--background-primary) !important;}
+/*slider gradient*/
+.style-gallery-label .swiper-button-next, .style-gallery-label .swiper-button-prev {background: -webkit-gradient(linear,left top,right top,from(hsla(0,0%,10%,0)),color-stop(72%,hsla(0,0%,14%,.9)),to(var(--background-primary))) !important;}
+/*footer*/
+.c-footer {background-color: var(--background-primary) !important;}
+
+/*item page*/
+/*"new"*/
+.product-intro__head-label span {background: var(--matcha) !important;}
+/*size*/
+[mir] .product-intro__size-radio {color: var(--purple) !important; border: 1px solid var(--purple) !important;}
+/*heart*/
+[mir] .product-intro__add-like {border: none !important;}
+.suiiconfont-critical[class*="_32px"] {color: var(--blue) !important;}
+.suiiconfont[class*="_32px"] {color: var(--pink) !important;}
+/*shipping/delivery svg*/
+.product-intro__freeshipping-icon .suiiconfont, .product-intro__freeshipping-icon .svgicon {color: var(--matcha) !important;}
+/*left right bullet strip*/
+.quick-view__main .swiper-container .swiper-container-horizontal .quick-view__main-bullets .swiper-pagination-bullets{ background-color: transparent !important; background: transparent !important; }
+/*brand logo*/
+[mir] .product-intro__brand-logo {filter: invert(0.9) !important; border: none !important;}
+/*stars rating*/
+[brd="sh"] .common-rate__item.suiiconfont {color: var(--orange) !important;}
+/*translate*/
+.rate-translate button {color: var(--teal) !important;}
+
+/*cart*/
+.c-bag-table thead, .c-bag-table thead th, .c-bag-table .col-total .table-cell, .c-cart-top .top-wrapper .section.shipping-sec,
+.c-cart-top .top-wrapper .section .section-l .iconfont,
+.c-bag-table .c-cart-item {background: var(--background-primary) !important; color: var(--grey6f) !important;}
+/* + - */
+.c-bag-qty > li.qty-opt, .c-bag-qty > li > input {background: var(--background-primary) !important; color: var(--grey6f) !important; border: none !important;}
+/*size option in cart*/
+.c-bag-table tbody .gd-des .gd-color-size {border: none !important}
+/*points reward*/
+.c-order-summary .point-tip .point-red {color: var(--pink) !important;}
+/*sale and size progress bar*/
+.ld-progress-con .total, [mir] .common-reviews__progress {background: #333 !important;}
+.ld-progress-con .sold, [mir][brd="sh"] .common-reviews__progress .progress-bar {background: var(--pink) !important;}
+/*shipping*/
+[mir] .product-intro__freeshipping {background-color: var(--background-primary) !important;}
+/*review average*/
+[mir] .common-reviews__averate {background-color: var(--background-primary) !important;}
+/*customer review images*/
+[mir] .customerreviews-details__image-swiper {background-color: var(--background-primary) !important;}
+.c-modal .modal-content {background: var(--background-primary) !important;}
+/*customer review image thumbnails*/
+[mir] .customerreviews-details__image-thumbs-image {border: none !important;}
+/*customter review "helpful"*/
+[mir] .customerreviews-details__thumbup {background: var(--pink) !important; border: none !important; border-radius: 6px !important;} 
+}
+
+
+/*coolors*/
+@-moz-document domain(medium.com) { 
+.c, .ag {background-color: var(--background-primary) !important;}
+.gv {color: var(--grey6f) !important;}
+}
+
+
+/*pdfs*/
+/*@-moz-document regexp("^https?://.*\\.pdf(\\?[^\\./]*)?$") {
+.pdfViewer .page {
+    filter: invert(0.86) hue-rotate(146deg);
+    border: none !important;
+  }
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+

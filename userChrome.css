@@ -1,0 +1,462 @@
+ 
+
+
+ :root {
+
+  --pink  : #E07A9D; 
+  --orange: #E9AC7F; 
+  --matcha: #9CC087; 
+  --teal  : #559988; 
+  --blue  : #8EB5DE; 
+  --purple: #A59CF5; 
+
+  --greybe: #bebebf;
+  --grey6f: #66666f;
+  --grey29: #292929;
+  --grey24: #242424;
+  --grey1e: #1e1e1e; 
+  --grey0f: #0f0f0f;
+
+  --dark: #161315;
+  --lightpink: #FFAAC7;
+
+  --background-primary: var(--grey29);
+
+
+  /* Minimal Functional Fox variables*/
+  --mff-bg: var(--background-primary);
+  --mff-icon-color: #8EB5DE;
+  --mff-nav-toolbar-padding: 8px;
+  --mff-sidebar-bg: var(--mff-bg);
+  --mff-sidebar-color: #8EB5DE;
+  --mff-tab-border-radius: 0px;
+  --mff-tab-color: #fefefa;
+  --mff-tab-font-family: "CozetteVector", sans;
+  --mff-tab-font-size: 11px;
+  --mff-tab-font-weight: 400;
+  --mff-tab-height: 42px;
+  --mff-tab-pinned-bg: #70c1b3;
+  --mff-tab-selected-bg: #1e1e1e;
+  --mff-tab-soundplaying-bg: #E07A9D;
+  --mff-urlbar-color: #8EB5DE;
+  --mff-urlbar-focused-color: #e0fbfc;
+  --mff-urlbar-font-family: "Lora", serif;
+  --mff-urlbar-font-size: 13px;
+  --mff-urlbar-font-weight: 400;
+  --mff-urlbar-results-color: #e0fbfc;
+  --mff-urlbar-results-font-family: "CozetteVector", serif;
+  --mff-urlbar-results-font-size: 12px;
+  --mff-urlbar-results-font-weight: 400;
+  --mff-urlbar-results-url-color: #98c1d9;
+  /*   --mff-tab-selected-bg: linear-gradient(90deg, rgba(232,74,95,1) 0%, rgba(255,132,124,1) 50%, rgba(254,206,168,1) 100%); */
+  /*   --mff-urlbar-font-weight: 600; */
+
+  /* Overriden Firefox variables*/
+  --autocomplete-popup-background: var(--mff-bg) !important;
+  --default-arrowpanel-background: var(--mff-bg) !important;
+  --default-arrowpanel-color: #fefefa !important;
+  --lwt-toolbarbutton-icon-fill: var(--mff-icon-color) !important;
+  --panel-disabled-color: #f9f9fa80;
+  --toolbar-bgcolor: var(--mff-bg) !important;
+  --urlbar-separator-color: transparent !important;
+  --urlbar-popup-action-color: pink !important;
+  --autocomplete-popup-highlight-background: var(--pink) !important;
+  --focus-outline-color: transparent !important; /* the annoying outline over searchbar when starting ff */ 
+  --download-progress-flare-color: var(--pink) !important;
+  --panel-banner-item-update-supported-bgcolor: var(--teal) !important;
+  --panel-banner-item-info-icon-bgcolor: var(--pink) !important;
+  --cfr-active-color: var(--pink) !important;
+  --short-notification-background: var(--pink) !important;
+  --lwt-brighttext-url-color: transparent !important;
+
+}
+
+
+/*
+                              88
+                              ""
+
+88,dPYba,,adPYba,  ,adPPYYba, 88 8b,dPPYba,
+88P'   "88"    "8a ""     `Y8 88 88P'   `"8a
+88      88      88 ,adPPPPP88 88 88       88
+88      88      88 88,    ,88 88 88       88
+88      88      88 `"8bbdP"Y8 88 88       88
+
+*/
+
+#main-window {background-color: var(--background-primary) !important; color: #66666f !important;}
+
+/*
+  _____ ___   ___  _    ___   _   ___
+|_   _/ _ \ / _ \| |  | _ ) /_\  | _ \
+  | || (_) | (_) | |__| _ \/ _ \ |   /
+  |_| \___/ \___/|____|___/_/  \_\_|_\
+*/
+
+toolbar {background-image: none !important;}
+toolbarbutton {box-shadow: none !important;}
+
+.toolbarbutton-text {color: var(--mff-icon-color)  !important;}
+.toolbarbutton-icon {/* filter: drop-shadow(0 0 0.75rem crimson); */}
+#tracking-protection-icon-container, #identity-box {display: none;}
+#back-button > .toolbarbutton-icon{--backbutton-background: transparent !important;border: none !important;}
+#back-button {list-style-image: url("left-arrow.svg") !important; olor: #8EB5DE !important; fill: #8EB5DE !important;}
+#forward-button {list-style-image: url("right-arrow.svg") !important; color: #8EB5DE !important; fill: #8EB5DE !important;}
+#navigator-toolbox, toolbaritem {border: none !important;}
+.toolbar-items {background-color: var(--mff-bg) !important;}
+#sidebar-search-container {background-color: var(--mff-sidebar-bg) !important;}
+box.panel-arrowbox {display: none;}
+box.panel-arrowcontent {border-radius: 8px !important;border: none !important;}
+image#star-button {display: none; fill: #E9AC7F !important;}
+toolbar#nav-bar {padding: 4px !important;}
+
+/*
+            _   _
+           | | | |
+ _   _ _ __| | | |__   __ _ _ __
+| | | | '__| | | '_ \ / _` | '__|
+| |_| | |  | | | |_) | (_| | |
+ \__,_|_|  |_| |_.__/ \__,_|_|
+
+*/
+
+#urlbar {
+  max-width: 70% !important;
+  margin: 0 15% !important;
+  border: none !important;
+  /*  position: unset!important; */;
+}
+
+#urlbar-background {
+  opacity: .98 !important;
+  background-color: var(--mff-bg) !important;
+  border: none !important;
+}
+
+#urlbar-input {
+  font-size: var(--mff-urlbar-font-size) !important;
+  color: var(--mff-urlbar-color) !important;
+  font-family: var(--mff-urlbar-font-family) !important;
+  font-weight: var(--mff-urlbar-font-weight)!important;
+  text-align: center !important;
+}
+
+/* url bar text while inputting  */
+#urlbar-input:focus {
+  color: var(--lightpink) !important;
+}
+
+/* url bar results hover – remove the ugly default hover */
+.urlbarView-row:not([type="tip"], [type="dynamic"], 
+[has-help]):hover > .urlbarView-row-inner, 
+.urlbarView-row[has-help] > .urlbarView-row-inner:not([selected]):hover {background-color: transparent !important;}
+.urlbarView-row:not([type="tip"], [type="dynamic"], 
+[has-help]):hover > .urlbarView-row-inner, 
+.urlbarView-row[has-help] > .urlbarView-row-inner:not([selected]) {background-color: transparent !important;}
+/*selected result NAME*/
+.urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner, .urlbarView-row-inner[selected] {
+    background-color: transparent !important;
+    color: #bebebf !important;
+}
+/* not selected result NAME hover*/
+.searchbar-engine-one-off-item:not([selected]):hover {
+  background-color: transparent !important;color: rgba(190,190,191,0.85) !important;
+}
+
+/*selected result URL*/
+.urlbarView-row:not([type="tip"] span.urlbarView-url, [type="dynamic"])[selected] > .urlbarView-row-inner span.urlbarView-url,
+.urlbarView-row-inner[selected] span.urlbarView-url {
+  color: #8EB5DE !important;
+}
+
+
+
+:root:not(:-moz-lwtheme) #urlbar:not([focused="true"]) {--urlbar-box-bgcolor: var(--background-primary) !important;}
+#urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {background-color: var(--background-primary) !important; box-shadow: none !important;}
+
+/*url results NAME*/
+#urlbar-results {
+  font-family: var(--mff-urlbar-results-font-family);
+  font-weight: var(--mff-urlbar-results-font-weight);
+  font-size: var(--mff-urlbar-results-font-size) !important;
+  color: #66666f !important;
+}
+
+/*url bar results URL*/
+.urlbarView-url, .search-panel-one-offs-container {
+  color: rgba(142, 181, 222, 0.6) !important;
+  /*color: var(--mff-urlbar-results-url-color) !important;*/
+  font-family: var(--mff-urlbar-font-family);
+  font-weight: var(--mff-urlbar-results-font-weight);
+  font-size: var(--mff-urlbar-font-size) !important;
+}
+
+/*url bar results action*/
+.urlbarView-row[selected] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action {color: pink !important;}
+
+
+.urlbar-icon > image {fill: var(--mff-icon-color) !important;color: var(--mff-icon-color) !important;}
+.urlbar-icon {color: var(--mff-icon-color)  !important;}
+.urlbarView-row[type="bookmark"] > span{color: green !important;}
+.urlbarView-row[type="switchtab"] > span{color: orange !important;}
+.urlbarView-favicon, .urlbarView-type-icon {display: none !important;}
+
+.megabar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+
+
+
+
+/*
+  ___ ___ ___  ___ ___   _   ___
+ / __|_ _|   \| __| _ ) /_\ | _ \
+ \__ \| || |) | _|| _ \/ _ \|   /
+ |___/___|___/|___|___/_/ \_\_|_\
+*/
+
+.close-icon, .urlbar-icon {fill: var(--mff-icon-color) !important;}
+.sidebar-placesTree {color: var(--mff-sidebar-color) !important;}
+#sidebar-switcher-target {/*   color: white !important; */}
+#sidebar-box {--sidebar-background-color: var(--mff-sidebar-bg) !important;}
+splitter#sidebar-splitter {opacity: 0 !important;}
+splitter#sidebar-splitter {border: none !important;background-color: transparent !important;}
+image#sidebar-icon {display: none;}
+
+
+/*
+
+888888888888 ad88888ba 888888888888
+     88     d8"     "8b     88
+     88     Y8,             88
+     88     `Y8aaaaa,       88
+     88       `"""""8b,     88
+     88             `8b     88
+     88     Y8a     a8P     88
+     88      "Y88888P"      88
+
+tree style tab sidebar
+hide tst, show on hover
+*/
+
+:root { --thin-tab-width: 15px; }
+:root { --wide-tab-width: 136px; }
+
+
+/* Hide splitter, when using Tree Style Tab. */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
+  display: none !important;
+}
+
+/* Shrink sidebar until hovered, when using Tree Style Tab. */
+#sidebar-box:not([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]) {
+  min-width: var(--wide-tab-width) !important;
+  max-width: none !important;
+}
+
+/*collapsed sidebar*/
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+  overflow: hidden !important;
+  position: relative !important;
+  transition: all 200ms !important;
+  transition-timing-function: cubic-bezier(0.3, 1.0, 0.3, 0.7);
+  min-width: var(--thin-tab-width) !important;
+  max-width: var(--thin-tab-width) !important;
+  z-index: 100;
+  border: none !important;
+}
+
+/*expanded sidebar*/
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar {
+  transition: all 200ms !important;
+  transition-timing-function: cubic-bezier(0.7, 0.3, 1.0, 0.3);
+  min-width: var(--wide-tab-width) !important;
+  max-width: var(--wide-tab-width) !important;
+  margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important; /* ensures the page doesn't get squashed when sidebar expands*/
+  z-index: 100;
+  border: none !important;
+}
+
+
+
+
+
+
+/*
+    _   ___ ___  _____      _____  _   _  _ ___ _
+   /_\ | _ \ _ \/ _ \ \    / / _ \/_\ | \| | __| |
+  / _ \|   /   / (_) \ \/\/ /|  _/ _ \| .` | _|| |__
+ /_/ \_\_|_\_|_\\___/ \_/\_/ |_|/_/ \_\_|\_|___|____|
+ */
+
+.panel-arrowcontent {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+toolbarseparator {
+  display: none;
+}
+
+
+
+
+/*
+  _____ _   ___ ___
+ |_   _/_\ | _ ) __|      sort of obsolete since i'm removing horizontal tab bar, and replacing with tst
+   | |/ _ \| _ \__ \
+   |_/_/ \_\___/___/
+
+*/
+
+
+
+/*hide horizontal tabs bar*/
+#TabsToolbar {
+    visibility: collapse;
+}
+
+/*#titlebar {
+    margin-bottom: 0px !important;
+}
+*/
+/*#titlebar-buttonbox {
+    height: 32px !important;
+}*/
+
+/*#nav-bar {
+    margin-right: 42px;
+}
+*/
+
+#main-window[sizemode="maximized"] #nav-bar {
+    margin-right: 42px;
+}
+
+/*hide TST header on sidebar*/
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  visibility: collapse;
+}
+
+
+.tab-background[selected="true"] {
+  background: var(--mff-tab-selected-bg) !important;
+  border-radius: var(--mff-tab-border-radius) !important;
+}
+
+.tab-background:not[visuallyselected] {
+  background: var(--mff-tab-selected-bg) !important;
+  opacity: 0.8 !important;
+}
+
+/* This positions the tabs under the navaigator container */
+#titlebar {
+  -moz-box-ordinal-group: 3 !important;
+}
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  border-left: none !important;
+}
+
+.tab-background {
+  border: none !important;
+}
+
+.tabbrowser-arrowscrollbox {
+  margin-inline-start: 4px !important;
+  margin-inline-end: 0px !important;
+}
+
+.tab-close-button {
+ display: none !important;
+}
+
+.tab-text {
+  font-family: var(--mff-tab-font-family);
+  font-weight: var(--mff-tab-font-weight);
+  font-size: var(--mff-tab-font-size) !important;
+  color: var(--mff-tab-color);
+}
+
+/* Hide the favicon for tabs */
+hbox.tab-content .tab-icon-image {
+  display: none !important;
+}
+
+/* Show the favicon for tabs that are pinned */
+hbox.tab-content[pinned=true] .tab-icon-image {
+  display: initial !important;
+}
+
+hbox.tab-content[pinned=true] .tab-text {
+  display: none !important;
+}
+
+#tabbrowser-tabs {
+  --tab-loading-fill: #033433 !important;
+
+}
+
+.tab-label-container:not([textoverflow]) {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+width: 50% !important;
+  max-width: 50% !important;
+  min-width: 50% !important;
+}
+
+/* .tab-label-container::after {
+  content: "?" !important;
+
+} */
+
+.tab-line {
+  display: none !important;
+}
+
+.tabbrowser-tab {
+  border-radius: var(--mff-tab-border-radius) !important;
+  border-width: 0;
+  height: var(--mff-tab-height) !important;
+  margin-bottom: 4px !important;
+  margin-inline-end: 4px !important;
+  margin-top: 0px !important;
+  max-height: var(--mff-tab-height) !important;
+  min-height: var(--mff-tab-height) !important;
+}
+
+.tabbrowser-tab[soundplaying="true"] {
+  background-color: var(--mff-tab-soundplaying-bg) !important;
+}
+
+#tabs-newtab-button {
+  list-style-image: url("add.svg") !important;
+  opacity: 0.7;
+}
+
+.tab-icon-sound {
+  display: none !important;
+}
+
+
+tab.tabbrowser-tab {
+  overflow: hidden;
+}
+
+tab.tabbrowser-tab:hover {
+  /*box-shadow: 0 1px 4px rgba(0,0,0,.05);*/
+  /*box-shadow: 0 1px 4px rgba(30,30,30,.05);*/
+  background-color: rgba(30,30,30,.05);
+}
+
+
+
+
+
+
+
