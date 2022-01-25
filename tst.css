@@ -1,0 +1,231 @@
+:root {
+  --pink  : #E07A9D; 
+  --orange: #E9AC7F; 
+  --matcha: #9CC087; 
+  --teal  : #559988; 
+  --blue  : #8EB5DE; 
+  --purple: #A59CF5; 
+
+  --greybe: #bebebf;
+  --grey6f: #66666f;
+  --grey24: #242424;
+  --grey1e: #1e1e1e; 
+
+  --tab-height: 36px; /* tab height, default: 19px */
+  --font-size: 12px;  /* tab height, default: 11px */
+}
+
+
+
+/* =========================== sidebar =========================== */
+
+/* remove tst sidebar header */
+#sidebar-header {
+  display: none;
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+
+
+/* =========================== favicons =========================== */
+
+/* hide all favicons */
+tab-item:not(.faviconized):not(.loading) tab-favicon {
+  display: none; 
+  filter: blur(0.9px) grayscale(0.36);
+}
+
+
+/* =========================== tabs  =========================== */
+
+/* indented area before tab */
+tab-item .extra-items-container.indent {
+  background-color: var(--grey24);
+}
+
+/* tab container, opened tabs */
+.tab {
+  background-color: var(--grey24); 
+  height: var(--tab-height);
+  font-family:"CozetteVector";
+}
+
+/* tab contents text*/
+.label {
+  margin-top: 3px;
+  margin-left: 2px;
+  font-size: var(--font-size);
+  color: var(--grey6f);
+  line-height: var(--tab-height);
+}
+
+/* number of tab children */
+.tab .counter {
+  margin-top: -3px;
+  color: var(--teal);
+}
+
+/* active tab */
+.tab.active .label {
+  color: var(--greybe);
+  background-color:transparent;
+}
+
+/* active tab, whole area */
+.tab.active {
+  background-color: var(--grey24);
+}
+
+/* =========================== tabs hover  =========================== */
+
+/* hovered tab text */
+.tab:hover .label {
+  color: rgba(190,190,191,0.7);
+}
+
+/*active tab hover*/
+.tab.active:hover .label {
+  color: #bebebf;
+  background-color:transparent;
+}
+
+/* not active inactive tab hover */
+.tab:not(.active):hover {
+  background-color: rgba(31,31,31,0);
+  opacity:1;
+}
+
+/* cannot get rid of the hover background colour without using span */ 
+.tab span {
+  background-color: rgba(36,36,36,0.2) !important;
+} 
+
+/* =========================== close x button  =========================== */
+/* the x on each tab */
+:root.simulate-svg-context-fill .closebox::after {
+  background: transparent;
+}
+
+/* only show close button when hovered */
+/* "#tabbar" is required for TST 3.4.0 and later! */
+#tabbar tab-item tab-item-substance:not(:hover) tab-closebox {
+  display: none;
+}
+
+/* set x and sound indicator color when tab is active or hovered */
+:root.simulate-svg-context-fill .tab.active .closebox::after,
+:root.simulate-svg-context-fill .tab:hover .closebox::after,
+:root.simulate-svg-context-fill .tab.active .sound-button::after,
+:root.simulate-svg-context-fill .tab:hover .sound-button::after {
+  background: var(--purple);
+}
+
+
+/* =========================== New tab button =========================== */
+
+/* new tab button */
+:root.simulate-svg-context-fill .newtab-button {
+  background-color: var(--grey24);
+  border: none;
+  line-height: 20px;
+}
+
+/* new tab button hover */
+:root.simulate-svg-context-fill .newtab-button:hover {
+  background-color: var(--grey24) !important;
+}
+
+/* new tab plus sign */
+:root.simulate-svg-context-fill .newtab-button::after {
+  background-color: var(--grey6f);
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+/* new tab plus sign on hover */
+:root.simulate-svg-context-fill .newtab-button:hover.newtab-button::after {
+  background-color: var(--greybe); 
+}
+
+/* background under new tab button */
+#background {
+  background: var(--grey24); 
+}
+
+
+  
+
+/* =========================== expand/collapse chevron arrow  =========================== */
+
+
+/* open/close tree chevron on tab move */
+tab-item:not(.collapsed):not(.subtree-collapsed) tab-twisty {
+  color: white !important;
+}
+
+/* open/close tree chevron on the left of the tab*/
+tab-twisty::before {
+  background-color: transparent !important; /* makes drop down arrow transparent until hover */
+}
+
+/* active tab tree chevron */
+.tab.active tab-twisty::before {
+  background-color: transparent !important; 
+}
+
+/* hovered tab tree chevron */
+.tab:hover tab-twisty::before {
+  background-color: var(--grey6f) !important; 
+}
+
+/* active and hovered tab tree chevron */
+.tab.active:hover tab-twisty::before {
+  background-color: var(--grey6f) !important; 
+}
+
+
+
+
+/* =========================== tabs misc  =========================== */
+
+/* unloaded tab */
+.tab.discarded {
+  background-color: black;
+}
+
+/* hide hidden tabs (it some times displays white area on larger tab sizes if this is not set) */
+tab-item.collapsed {
+  display: none; 
+}
+
+/* drop tab location */
+tab-item[data-drop-position="self"] tab-item-substance {
+  outline-color: white !important; /* border around text */
+  background-color: white;         /* make drop tab white */
+}
+
+/* drop tab location label */
+tab-item[data-drop-position="self"] tab-item-substance .label {
+ color: black; 
+}
+
+/* drop tab location line after/before tab */
+tab-item[data-drop-position]:not([data-drop-position="self"]) tab-item-substance::before {
+  background-color:white !important;
+}
+
+
+/* sound indicator */
+:root.simulate-svg-context-fill .sound-button::after {
+  background: var(--pink);
+}
+
+
+/* =========================== scrollbar =========================== */
+
+/* scrollbar */
+#tabbar {
+  scrollbar-color: var(--blue) rgba(0,0,0,0.8);
+}
+
