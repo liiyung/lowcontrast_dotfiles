@@ -11,8 +11,8 @@
 # see this wiki page for information:
 #  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 #
-# sudo yabai --load-sa
-# yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # global settings
 yabai -m config window_shadow                off
@@ -32,13 +32,13 @@ yabai -m config mouse_drop_action            swap
 yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.1
 yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        0.96
+yabai -m config normal_window_opacity        0.95
 
 # window borders
-yabai -m config window_border                on
-yabai -m config window_border_width          1
-yabai -m config active_window_border_color   0xff292929
-yabai -m config normal_window_border_color   0xff292929
+yabai -m config window_border                off
+yabai -m config window_border_width          0.1
+yabai -m config active_window_border_color   0x00292929
+yabai -m config normal_window_border_color   0x00292929
 
 # general space settings
 yabai -m config layout                       float
